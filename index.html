@@ -1197,8 +1197,8 @@
                             <div class="map-popup-address">📍 ${patient.adresse}</div>
                             ${patient.telephone ? `<div class="map-popup-address">📞 ${patient.telephone}</div>` : ''}
                             <div class="map-popup-buttons">
-                                <a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(patient.adresse)}" target="_blank" class="map-popup-btn">🗺️ Maps</a>
-                                <a href="https://waze.com/ul?q=${encodeURIComponent(patient.adresse)}&navigate=yes" target="_blank" class="map-popup-btn secondary">🚗 Waze</a>
+                                <a href="https://www.google.com/maps/dir/?api=1&origin=current+location&destination=${encodeURIComponent(patient.adresse)}" target="_blank" class="map-popup-btn">🗺️ Maps</a>
+                                <a href="https://waze.com/ul?q=${encodeURIComponent(patient.adresse)}&navigate=yes" target="_blank" class="map-popup-btn">🚗 Waze</a>
                             </div>
                             ${patient.telephone ? `<a href="tel:${patient.telephone}" class="map-popup-btn" style="margin-top: 0.5rem;">📞 Appeler</a>` : ''}
                         </div>
@@ -1289,8 +1289,8 @@
                             </div>
                         </div>
                         <div class="patient-actions">
-                            ${hasAddress ? `<a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(patient.adresse)}" target="_blank" class="patient-action-btn" style="text-decoration: none;">🗺️ Maps</a>` : ''}
-                            ${hasAddress ? `<a href="https://waze.com/ul?q=${encodeURIComponent(patient.adresse)}&navigate=yes" target="_blank" class="patient-action-btn secondary" style="text-decoration: none;">🚗 Waze</a>` : ''}
+                            ${hasAddress ? `<a href="https://www.google.com/maps/dir/?api=1&origin=current+location&destination=${encodeURIComponent(patient.adresse)}" target="_blank" class="patient-action-btn" style="text-decoration: none;">🗺️ Maps</a>` : ''}
+                            ${hasAddress ? `<a href="https://waze.com/ul?q=${encodeURIComponent(patient.adresse)}&navigate=yes" target="_blank" class="patient-action-btn" style="text-decoration: none;">🚗 Waze</a>` : ''}
                             ${hasPhone ? `<a href="tel:${patient.telephone}" class="patient-action-btn secondary" style="text-decoration: none;">📞 Appeler</a>` : ''}
                         </div>
                     </div>
